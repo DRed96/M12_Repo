@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/prova', function () {
+    return view('layouts.masterLayout');
+});

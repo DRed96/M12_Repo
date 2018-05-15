@@ -19,3 +19,11 @@ Route::get('/', function () {
 Route::get('/test', function () {
     return view('layouts.masterLayout');
 });
+
+
+Route::get('/crearEsdeveniment', function () {
+    return view('crearEsdeveniment');
+});
+
+//Crear esdeveniment
+Route::get('/crearEsdeveniment', 'crearEsdeveniment_Controller@getIndex');

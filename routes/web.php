@@ -16,6 +16,6 @@ Route::get('/', function () {
 });
 
 
-Route::get('/prova', function () {
+Route::get('/test', function () {
     return view('layouts.masterLayout');
 });

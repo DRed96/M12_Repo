@@ -1,46 +1,44 @@
-<nav class="navbar navbar-inverse navbar-static-top" id="topNavBar">
-
-    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-    </button>
-
-    <a class="navbar-brand" href="#">Fixed navbar</a>
-    <!--
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    -->
-    <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-            <li>
-                <!-- class="active" -->
-                <a class="nav-link" href="{{url('/abrirCarpeta/public')}}">Public<span class="sr-only">(current)</span></a>
-            </li>
-            <li>
-                <a href="{{url('/editarPerfil/')}}">Editar perfil</a>
-            </li>
-            <li>
-                <a href="{{url('/CU_51/')}}">Logout</a>
-            </li>
-        </ul>
-        <!--
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" placeholder="Search" aria-label="Search" type="text">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
-        -->
-        <form class="navbar-form navbar-right" method="GET" action="{{url('/resultadoBusqueda/')}}" style="margin-right: 0px;">
-            <div class="form-group">
-                <input type="text"  name="cadena" id="cadena"  class="form-control" placeholder="Buscar Documents">
-            </div>
-            <button class="btn btn-default">Buscar</button>
-        </form>
+<nav class="navbar navbar-default navbar-static-top navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" role="navigation"/>
+        <!-- Posat per millorar l'accesibilitat de la pàgina -->
+        <span class="sr-only">Barra de navegació princial</span>
+      </button>
+      <a class="navbar-brand" href="#">( >^w^)><(^-^<)</a>
     </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+
+          <a href="#" class="dropdown-toggle profile-image" data-toggle="dropdown">
+          <img src="{{url('index.jpg')}}"
+                 class="profile-image img-profile img-circle">
+          </a>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle profile-image" data-toggle="dropdown">
+              <img src="http://placehold.it/30x30" alt="Profile picture"
+                class="img-circle special-img"> Username <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+              <li><a href="#"><i class="fa fa-cog"></i>Account</a></li>
+              <li class="divider"></li>
+              <li><a href="#"><i class="fa fa-sign-out"></i>Sign-out</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Buscar esdeveniment">
+        </div>
+        <button type="submit" class="btn btn-default">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </button>
+      </form>
+    </div>
+  </div>
 </nav>
-<div id="mySidenav" class="sidenav">
+<!-- <div id="mySidenav" class="sidenav">
     <a href="{{url('/abrirCarpeta/personal')}}">Personal</a>
     <a href="{{url('/CU_42_GestionarUsuaris')}}">Gestionar Usuaris</a>
     <a href="{{url('/CU_36_GestionarGrups')}}">Gestionar Grups</a>
@@ -48,13 +46,9 @@
     <a href="{{url('/consultarLogs')}}">Consultar Logs</a>
     <a href="#">Notificacions</a>
     <a href="#">Contact</a>
-</div>
+</div>  -->
 
-<script>
-    <!--
-            Posar funció window.width per a obrir o tancar la navbar
-            Evitar que el main es "caigui"
-            -- >
+<!-- <script>
     function openNav() {
         document.getElementById("mySidenav").style.width = "250px";
     }
@@ -62,4 +56,4 @@
     function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
     }
-    </script>
+</script> -->

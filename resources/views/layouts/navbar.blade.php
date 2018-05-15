@@ -38,7 +38,7 @@
     </div>
   </div>
 </nav>
-<!-- 
+<!--
 <div id="mySidenav" class="sidenav">
     <a href="{{url('/abrirCarpeta/personal')}}">Personal</a>
     <a href="{{url('/CU_42_GestionarUsuaris')}}">Gestionar Usuaris</a>
@@ -47,7 +47,7 @@
     <a href="{{url('/consultarLogs')}}">Consultar Logs</a>
     <a href="#">Notificacions</a>
     <a href="#">Contact</a>
-</div>  
+</div>
 
 <script>
     function openNav() {
@@ -58,4 +58,3 @@
         document.getElementById("mySidenav").style.width = "0";
     }
 </script> -->
-

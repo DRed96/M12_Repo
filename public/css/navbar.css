@@ -2,15 +2,27 @@
 {
     width: 3.6em;
     height: 3.6em;
-    margin: 0.3em 0;
-    margin-right: 0.65em;
+    padding-right: 0.65em;
     float: left;
-    padding-top: 0px;
-    padding-bottom: 0px;
     /*
     left: -5px;
-    position: relative;
-
-     top: -5px;
      */
+}
+
+#profile-link{
+   padding-top: 0.15em;
+   padding-bottom: 0.15em;
+}
+
+#navbarTop{
+  padding-top: 0.2em;
+  padding-bottom: 0.15em;
+}
+
+ul.dropdown-menu > li > a > i.fa{
+  margin-right: 0.3em;
+}
+
+ul.dropdown-menu > li > a {
+  padding-left: 1.3em;
 }

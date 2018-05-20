@@ -3,7 +3,7 @@
 	<head>
 		<!-- Libs -->
 		<link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" type="text/css" />
-		<link href="{{ asset('css/fontawesome-all.css') }}" rel="stylesheet" />
+		<link href="{{ asset('css/fontawesome-all.css') }}" type="text/css" rel="stylesheet" />
 
 		<script src="{{ asset('js/jquery-3.3.1.js') }}" type="text/javascript"></script>
 		<script src="{{ asset('js/bootstrap.js') }}" type="text/javascript"></script>

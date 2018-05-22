@@ -11,45 +11,55 @@
 </script>
 
 <div>
-    <form id="sign_up_form" method="POST" action="{{ action(UsersController@crearEsdeveniment ) }}">
+        <form id="sign_up_form" method="POST" action="/crearEsdeveniment">
+
         {{ csrf_field() }}
         <div class="form-group">
         	<label for="title">Nom esdeveniment</label>
-            <input type="text" name="nomEsdeveniment" id="nomEsdeveniment" class="form-control" required value="{{$esdeveiment->nom}}">
+			<input type="text" class="form-control" id="nomEsdeveniment" name="nomEsdeveniment" placeholder="Nom" required/>
         </div>
 
 		<div class="form-group">
         	<label for="title">Lloc esdeveniment</label>
-            <input type="text" name="llocEsdeveniment" id="llocEsdeveniment" class="form-control" required value="{{$esdeveiment->lloc}}">
+            <input type="text" class="form-control" id="llocEsdeveniment" name="llocEsdeveniment" placeholder="Lloc" required/>
         </div>
 
 		<div class="form-group">
-        	<label for="title">Data esdeveniment</label>
-            <div class='input-group date'>
-                    <input type='text' class="form-control" id='birthdatePicker'/>
+                <label for="name">Data Esdeveniment</label>
+                <div class='input-group date'>
+                    <input match="[]" type='text' class="form-control" id='birthdatePicker' name="birthdatePicker" required/>
                     <span class="input-group-addon">
                         <i class="fas fa-calendar-alt"></i>
                     </span>
                 </div>
+            </div>
+            <script type="text/javascript">
+            $(function () {
+                $('#birthdatePicker').datetimepicker({
+                    viewMode: 'years',
+                    format: 'YYYY-MM-DD'
+                });
+            });
+            </script>
         </div>
 
 		<div class="form-group">
         	<label for="title">Descripcio esdeveniment</label>
-            <input type="text" name="descripcioEsdeveniment" id="descripcioEsdeveniment" class="form-control" required value="{{$esdeveiment->descripcio}}">
+            <input type="text" class="form-control" id="descripcioEsdeveniment" name="descripcioEsdeveniment" placeholder="Descripcio" required/>
         </div>
 		
 		<div class="form-group">
         	<label for="title">Etiquetes esdeveniment</label>
-            <input type="text" name="etiquetesEsdeveniment" id="etiquetesEsdeveniment" class="form-control" required value="{{$esdeveiment->etiquetes}}">
+            <input type="text" class="form-control" id="etiquetesEsdeveniment" name="etiquetesEsdeveniment" placeholder="Etiquetes" required/>
 		
 		<div class="form-group">
         	<label for="title">Participants esdeveniment</label>
-            <input type="text" name="participantsEsdeveniment" id="participantsEsdeveniment" class="form-control" required value="{{$esdeveiment->participants}}">
+            <input type="text" class="form-control" id="participantsEsdeveniment" name="Esdeveniment" placeholder="Participants" required/>
         </div>
 		
 		<div class="form-group">
         	<label for="title">Periodicitat esdeveniment</label>
-            <input type="text" name="periodicitatEsdeveniment" id="periodicitatEsdeveniment" class="form-control" required value="{{$esdeveiment->periodicitat}}">
+            <input type="text" class="form-control" id="periodicitatEsdeveniment" name="periodicitatEsdeveniment" placeholder="Periodicitat" required/>
         </div>
 
 

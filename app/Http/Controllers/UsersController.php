@@ -27,7 +27,7 @@ class UsersController extends Controller
             $nouUsuari->email = $request->email;
             $nouUsuari->contrasenya = $request->password;
             $nouUsuari->dataNaix = $request->birthdatePicker;
-            $nouUsuari->descripcio = $request->;
+			$nouUsuari->descripcio = $request->;
             $nouUsuari->tipus = $request->'Client';
             $nouUsuari->save();
             Notification::success("Usuari creat correctament");

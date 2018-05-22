@@ -12,16 +12,20 @@ class CrearEsdeveniment_Controller extends Controller {
 }
 	
 	public function postRegistrar(){
-        $nouEsdeveniment = new Esdeveniment;
+        
+            $nouEsdeveniment = new Esdeveniment;
+            $nouEsdeveniment->nomEsdeveniment = $request->nomEsdeveniment;
+			$nouEsdeveniment->llocEsdeveniment = $request->llocEsdeveiment;
+			$nouEsdeveniment->dataEsdeveniment = $request->dataEsdeveiment;
+			$nouEsdeveniment->descripcioEsdeveniment = $request->descripcioEsdeveiment;
+			$nouEsdeveniment->etiquetesEsdeveniment = $request->etiquetesEsdeveiment;
+			$nouEsdeveniment->participantsEsdeveniment = $request->participacioEsdeveiment;
+			$nouEsdeveniment->periodicitatEsdeveniment = $request->periodicitatEsdeveiment;
 
-        if(false){
-            
-            Notification::success("Esdeveniment creat correctament");
-        }
-        else{
-            Notification::error("Error: Dades incorrectes");
-        }
-        return view('Llistat esdeveniments');
-    }
-}
+
+            $nouEsdeveniment->save();
+             Notification::success("Usuari creat correctament");
+        
+
+}}
 ?>

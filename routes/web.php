@@ -16,10 +16,14 @@ Route::get('/', function () {
 });
 
 
-Route::get('/test', function () {
+Route::get('/testLayout', function () {
     return view('layouts.masterLayout');
 });
 
+Route::get('/main', function () {
+    // Posar controlador
+    return view('layouts.masterLayout');
+});
 
 Route::get('/crearEsdeveniment', function () {
     return view('crearEsdeveniment');

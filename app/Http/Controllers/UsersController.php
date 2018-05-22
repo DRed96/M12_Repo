@@ -48,8 +48,13 @@ class UsersController extends Controller
             $nouUsuari->email = $request->email;
             $nouUsuari->contrasenya = Crypt::encrypt($request->password);
             $nouUsuari->dataNaix = $request->birthdatePicker;
+<<<<<<< HEAD
             // $nouUsuari->descripcio = $request->;
             $nouUsuari->tipus = 'Client';
+=======
+			$nouUsuari->descripcio = $request->;
+            $nouUsuari->tipus = $request->'Client';
+>>>>>>> dfad76669eb38236da083a17e198b1f024c88fab
             $nouUsuari->save();
             // Notification::success("Usuari creat correctament");
             return redirect('/registrarse');

@@ -29,3 +29,5 @@ Route::get('/crearEsdeveniment', function () {
 Route::get('/crearEsdeveniment', 'crearEsdeveniment_Controller@getIndex');
 
 Route::get('/registrarse','UsersController@getRegistrar');
+
+Route::post('/registrarse','UsersController@postRegistrar');

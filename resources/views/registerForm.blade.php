@@ -11,30 +11,30 @@
 </script>
 
 <div>
-    <form id="sign_up_form" method="POST" action="{{ action(UsersController@postRegistrar) }}">
+    <form id="sign_up_form" method="POST" action="/registrarse">
         {{ csrf_field() }}
         <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="Name" />
+            <input type="text" class="form-control" id="name" name="name" placeholder="Name" required/>
         </div>
         <div class="form-group">
             <label for="surname">Surname</label>
-            <input type="text" class="form-control" id="surname" name="surname" placeholder="Surname" />
+            <input type="text" class="form-control" id="surname" name="surname" placeholder="Surname" required/>
         </div>
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="Email" />
+            <input type="email" class="form-control" id="email" name="email" placeholder="Email" required/>
         </div>
         <div class="form-group">
             <label for="email2">Confirm email</label>
-            <input type="email" class="form-control" id="email2" name="email2" placeholder="Confirm email" />
+            <input type="email" class="form-control" id="email2" name="email2" placeholder="Confirm email" required/>
         </div>
         <div >
             <!-- class="col-sm-6" -->
             <div class="form-group">
                 <label for="name">Birthdate</label>
                 <div class='input-group date'>
-                    <input type='text' class="form-control" id='birthdatePicker'/>
+                    <input match="[]" type='text' class="form-control" id='birthdatePicker' name="birthdatePicker" required/>
                     <span class="input-group-addon">
                         <i class="fas fa-calendar-alt"></i>
                     </span>
@@ -51,11 +51,11 @@
         </div>
         <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" class="form-control" id="password" name="password" placeholder="Password" />
+            <input type="password" class="form-control" id="password" name="password" placeholder="Password" required />
         </div>
         <div class="form-group">
             <label for="password2">Confirm password</label>
-            <input type="password" class="form-control" id="password2" name="password2" placeholder="Confirm password" />
+            <input type="password" class="form-control" id="password2" name="password2" placeholder="Confirm password" required/>
         </div>
         <!-- TODO: CHANGE DDBB -->
         <div class="form-group">

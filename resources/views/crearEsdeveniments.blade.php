@@ -25,7 +25,12 @@
 
 		<div class="form-group">
         	<label for="title">Data esdeveniment</label>
-            <input type="text" name="dataEsdeveniment" id="dataEsdeveniment" class="form-control" required value="{{$esdeveiment->data}}">
+            <div class='input-group date'>
+                    <input type='text' class="form-control" id='birthdatePicker'/>
+                    <span class="input-group-addon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </span>
+                </div>
         </div>
 
 		<div class="form-group">

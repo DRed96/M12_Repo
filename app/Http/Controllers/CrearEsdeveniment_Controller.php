@@ -1,19 +1,27 @@
 <?php
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
+use App\Usuari;
+
 class CrearEsdeveniment_Controller extends Controller {
 
-    public function crearEsdeveniment(Request $request) {
+    public function getEsdeveniment(Request $request) {
 
-            $esdeveniment = new Esdeveniment;
-            $esdeveniment->nom = $request->nomEsdeveniment;
-            $esdeveniment->lloc = $request->llocEsdeveniment;
-            $esdeveniment->data = $request->dataEsdeveniment;
-            $esdeveniment->descripcio = $request->descripcioEsdeveniment;
-            $esdeveniment->etiquetes = $request->etiquetesEsdeveniment;
-            $esdeveniment->participants = $request->participantsEsdeveniment;
-            $esdeveniment->periodicitat = $request->perioicitatEsdeveniment;
-            $esdeveniment->save();
+       return view('crearEsdeveniments');    
 }
+	
+	public function postRegistrar(){
+        $nouEsdeveniment = new Esdeveniment;
+
+        if(false){
+            
+            Notification::success("Esdeveniment creat correctament");
+        }
+        else{
+            Notification::error("Error: Dades incorrectes");
+        }
+        return view('Llistat esdeveniments');
+    }
 }
 ?>

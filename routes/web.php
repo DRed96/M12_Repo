@@ -39,6 +39,9 @@ Route::get('/crearGrups', 'crearGrup_Controller@getGrup');
 
 Route::post('/crearGrups', 'crearGrup_Controller@postGrup');
 
+// Registrarse
 Route::get('/registrarse','UsersController@getRegistrar');
 
 Route::post('/registrarse','UsersController@postRegistrar');
+
+Route::post('/processLogin','UsersController@postLogin');

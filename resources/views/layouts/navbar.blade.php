@@ -1,10 +1,13 @@
+<?php session_start() ?>
 <nav id="navbarTop" class="navbar navbar-default navbar-static-top navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" role="navigation"/>
-        <!-- Posat per millorar l'accesibilitat de la pàgina -->
-        <span class="sr-only">Barra de navegació princial</span>
+          <!-- Posat per millorar l'accesibilitat de la pàgina -->
+          <span class="sr-only">Barra de navegació princial</span>
+          <i class="fas fa-bars"></i>
       </button>
+
       <a class="navbar-brand" href="#">Logo</a>
     </div>
 
@@ -41,6 +44,8 @@
             </button>
           </form>
         </li>
+
+        @if(isset($_SESSION['idUsuari']))
         <li class="dropdown">
           <a id="profile-link" href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="http://placehold.it/45x45" alt="Profile picture"
@@ -54,11 +59,22 @@
               <li><a href="#"><i class="fa fa-sign-out"></i>Sign-out</a></li>
           </ul>
         </li>
-      </ul>
+        @else
+        <li style="padding-right:0.5em">
+            <button type="button" class="btn btn-primary navbar-btn" data-toggle="modal" data-target="#modalLogin">
+                Accedir
+            </button>
+        </li>
 
+        @endif
+      </ul>
     </div>
   </div>
 </nav>
+
+@if(!(isset($_SESSION['idUsuari'])))
+    @include('modals.mLogin')
+@endif
 <!--
 <div id="mySidenav" class="sidenav">
     <a href="{{url('/abrirCarpeta/personal')}}">Personal</a>

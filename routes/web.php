@@ -30,6 +30,11 @@ Route::get('/crearEsdeveniment', 'crearEsdeveniment_Controller@getEsdeveniment')
 
 Route::post('/crearEsdeveniment', 'crearEsdeveniment_Controller@postEsdeveniment');
 
+//Crear Grup
+Route::get('/crearGrups', 'crearGrup_Controller@getGrup');
+
+Route::post('/crearGrups', 'crearGrup_Controller@postGrup');
+
 Route::get('/registrarse','UsersController@getRegistrar');
 
 Route::post('/registrarse','UsersController@postRegistrar');

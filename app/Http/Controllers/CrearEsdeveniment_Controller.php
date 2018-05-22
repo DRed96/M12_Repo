@@ -11,7 +11,7 @@ class CrearEsdeveniment_Controller extends Controller {
        return view('crearEsdeveniments');    
 }
 	
-	public function postRegistrar(){
+	public function postEsdeveniment(){
         
             $nouEsdeveniment = new Esdeveniment;
             $nouEsdeveniment->nomEsdeveniment = $request->nomEsdeveniment;

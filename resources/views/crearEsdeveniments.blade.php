@@ -1,14 +1,19 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Crear esdeveniment</title>
+@extends('layouts.masterLayout')
 
-    </head>
-    <body>
+@section('content')
+<link href="{{ asset('css/bootstrap-datetimepicker.css') }}" rel="stylesheet" type="text/css" />
+<script src="{{ asset('js/moment.js') }}" type="text/javascript"></script>
+<script src="{{ asset('js/bootstrap-datetimepicker.js') }}" type="text/javascript"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-		<div class="form-group">
+<script>
+    moment().format();
+</script>
+
+<div>
+    <form id="sign_up_form" method="POST" action="{{ action(UsersController@crearEsdeveniment ) }}">
+        {{ csrf_field() }}
+        <div class="form-group">
         	<label for="title">Nom esdeveniment</label>
             <input type="text" name="nomEsdeveniment" id="nomEsdeveniment" class="form-control" required value="{{$esdeveiment->nom}}">
         </div>
@@ -40,9 +45,10 @@
 		<div class="form-group">
         	<label for="title">Periodicitat esdeveniment</label>
             <input type="text" name="periodicitatEsdeveniment" id="periodicitatEsdeveniment" class="form-control" required value="{{$esdeveiment->periodicitat}}">
-			
-			
         </div>
-	
-    </body>
-</html>
+
+
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+</div>
+@stop
